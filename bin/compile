@@ -43,6 +43,12 @@ chmod +x $WKHTMLTOPDF_BINARIES/*
 echo "-----> Moving binaries to the right place"
 mv $WKHTMLTOPDF_BINARIES/* $BIN_PATH/
 
+echo "-----> Removing wkhtmltoimage binary"
+rm -rf "$BIN_PATH/wkhtmltoimage"
+
+echo "-----> Cleaning up"
+rm -rf $WKHTMLTOPDF_PATH
+
 echo "-----> Installing fonts"
 mkdir -p $1/.fonts
 ls $FONTS_DIR
