@@ -5,6 +5,7 @@ set -e
 
 BUILD_DIR=$1
 CACHE_DIR=$2
+ls -d $BUILD_DIR
 
 BIN_PATH="$BUILD_DIR/bin/wkhtmltopdf"
 TMP_PATH="$BUILD_DIR/tmp"
